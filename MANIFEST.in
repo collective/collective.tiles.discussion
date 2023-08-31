@@ -1,4 +1,4 @@
-graft src/collective.tiles
+graft src
 include *.rst
 exclude tox.ini
 exclude *.txt

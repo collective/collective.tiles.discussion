@@ -11,7 +11,6 @@ class ICollectiveTilesDiscussionLayer(IDefaultBrowserLayer):
 
 
 class IDiscussionTileData(model.Schema):
-
     title = schema.TextLine(
         title=_("Title"),
         required=False,

@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
-<registry
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    i18n:domain="collective.tiles.discussion">
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="collective.tiles.discussion"
+>
 
   <record name="plone.app.tiles">
     <value purge="false">
@@ -12,14 +12,15 @@
   <!-- Note: the condition attribute is supported since Plone 5.1.
        "installed" means that the module is available in Python.
        The package may not have been activated in Plone. -->
-  <records prefix="plone.app.mosaic.app_tiles.collective_tiles_discussion"
+  <records condition="installed plone.app.mosaic"
            interface="plone.app.mosaic.interfaces.ITile"
-           condition="installed plone.app.mosaic">
+           prefix="plone.app.mosaic.app_tiles.collective_tiles_discussion"
+  >
     <value key="name">collective.tiles.discussion</value>
     <value key="label">Latest comments</value>
     <value key="category">applications</value>
     <value key="tile_type">app</value>
-    <value key="default_value"></value>
+    <value key="default_value" />
     <value key="read_only">false</value>
     <value key="settings">true</value>
     <value key="favorite">false</value>
@@ -27,6 +28,6 @@
     <value key="weight">20</value>
   </records>
 
-<!-- -*- extra stuff goes here -*- -->
+  <!-- -*- extra stuff goes here -*- -->
 
 </registry>

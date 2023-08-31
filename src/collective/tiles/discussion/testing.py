@@ -1,17 +1,13 @@
-from plone.app.testing import (
-    applyProfile,
-    FunctionalTesting,
-    IntegrationTesting,
-    PLONE_FIXTURE,
-    PloneSandboxLayer,
-)
-from plone.testing import zope
+from plone.app.testing import applyProfile
+from plone.app.testing import FunctionalTesting
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import PLONE_FIXTURE
+from plone.app.testing import PloneSandboxLayer
 
 import collective.tiles.discussion
 
 
 class CollectiveTilesDiscussionLayer(PloneSandboxLayer):
-
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
@@ -22,7 +18,7 @@ class CollectiveTilesDiscussionLayer(PloneSandboxLayer):
         self.loadZCML(package=collective.tiles.discussion)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.tiles.discussion:default')
+        applyProfile(portal, "collective.tiles.discussion:default")
 
 
 COLLECTIVE_TILES_DISCUSSION_FIXTURE = CollectiveTilesDiscussionLayer()
@@ -30,11 +26,11 @@ COLLECTIVE_TILES_DISCUSSION_FIXTURE = CollectiveTilesDiscussionLayer()
 
 COLLECTIVE_TILES_DISCUSSION_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_TILES_DISCUSSION_FIXTURE,),
-    name='CollectiveTilesDiscussionLayer:IntegrationTesting',
+    name="CollectiveTilesDiscussionLayer:IntegrationTesting",
 )
 
 
 COLLECTIVE_TILES_DISCUSSION_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_TILES_DISCUSSION_FIXTURE,),
-    name='CollectiveTilesDiscussionLayer:FunctionalTesting',
+    name="CollectiveTilesDiscussionLayer:FunctionalTesting",
 )

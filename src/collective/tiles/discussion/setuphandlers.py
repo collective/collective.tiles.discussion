@@ -1,5 +1,6 @@
 from zope.interface import implementer
 
+
 try:
     from plone.base.interfaces import INonInstallable
 except ImportError:
@@ -8,8 +9,7 @@ except ImportError:
 
 
 @implementer(INonInstallable)
-class HiddenProfiles(object):
-
+class HiddenProfiles:
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [

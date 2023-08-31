@@ -2,4 +2,4 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('collective.tiles.discussion')
+_ = MessageFactory("collective.tiles.discussion")

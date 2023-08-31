@@ -3,8 +3,6 @@ from plone import api
 from plone import tiles
 from plone.app.uuid.utils import uuidToPhysicalPath
 
-import random
-
 
 class DiscussionTile(tiles.PersistentTile):
     """A tile that show discussion items."""
@@ -44,4 +42,4 @@ class DiscussionTile(tiles.PersistentTile):
     def results(self):
         # The query passes the limit to the catalog, but this is only a hint to
         # speed up sorting.  We may get more results.  So limit it explicitly.
-        return api.content.find(**self.query)[:self.limit]
+        return api.content.find(**self.query)[: self.limit]

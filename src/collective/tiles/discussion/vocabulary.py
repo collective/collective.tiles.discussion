@@ -1,14 +1,13 @@
-from Acquisition import aq_get
 from plone import api
+from zope.globalrequest import getRequest
 from zope.i18n import translate
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
-from zope.globalrequest import getRequest
 
 
 @implementer(IVocabularyFactory)
-class DiscussionStatesVocabulary(object):
+class DiscussionStatesVocabulary:
     """
     A simple vocab to translate the discussion states
     """

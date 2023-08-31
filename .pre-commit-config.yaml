@@ -26,6 +26,7 @@ repos:
     -   id: codespell
         additional_dependencies:
           - tomli
+        args: [--builtin, clear]
 -   repo: https://github.com/mgedmin/check-manifest
     rev: "0.49"
     hooks:

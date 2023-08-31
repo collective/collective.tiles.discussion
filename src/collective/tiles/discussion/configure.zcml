@@ -2,11 +2,12 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="collective.tiles.discussion">
+    i18n_domain="collective.tiles.discussion"
+    >
 
   <i18n:registerTranslations directory="locales" />
 
-  <include package="plone.app.tiles"/>
+  <include package="plone.app.tiles" />
   <include file="permissions.zcml" />
   <include file="profiles.zcml" />
 
@@ -14,19 +15,19 @@
       name="collective.tiles.discussion"
       title="Discussion tile"
       description="A tile that shows the latest discussion items"
+      for="*"
       schema=".interfaces.IDiscussionTileData"
       class=".tile.DiscussionTile"
       template="discussion_tile.pt"
-      add_permission="cmf.ModifyPortalContent"
       permission="zope2.View"
+      add_permission="cmf.ModifyPortalContent"
       layer=".interfaces.ICollectiveTilesDiscussionLayer"
-      for="*"
       />
 
   <utility
-    component=".vocabulary.DiscussionStatesVocabularyFactory"
-    name="collective.tile.discussion.DiscussionStatesVocabulary"
-    />
+      name="collective.tile.discussion.DiscussionStatesVocabulary"
+      component=".vocabulary.DiscussionStatesVocabularyFactory"
+      />
 
   <!-- -*- extra stuff goes here -*- -->
 
