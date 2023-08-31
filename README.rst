@@ -2,12 +2,13 @@
 collective.tiles.discussion
 ===========================
 
-Tile for showing last discussion items in the portal
+Tile for showing most recent discussion items.
+
 
 Features
 --------
 
-- Can be bullet points
+- Tile with several fields to determine which discussion items to show.
 
 
 Installation
@@ -24,6 +25,8 @@ Install collective.tiles.discussion by adding it to your buildout::
 
 
 and then running ``bin/buildout``.
+
+You probably want to add a tile management package as well, for example ``plone.app.mosaic``.
 
 
 Contribute

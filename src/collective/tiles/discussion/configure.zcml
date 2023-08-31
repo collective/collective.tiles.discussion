@@ -1,13 +1,28 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.tiles.discussion">
 
   <i18n:registerTranslations directory="locales" />
 
+  <include package="plone.app.tiles"/>
   <include file="permissions.zcml" />
   <include file="profiles.zcml" />
   <include package=".browser" />
+
+  <plone:tile
+      name="collective.tiles.discussion"
+      title="Discussion tile"
+      description="A tile that shows the latest discussion items"
+      schema=".interfaces.IDiscussionTileData"
+      class=".tile.DiscussionTile"
+      template="browser/discussion_tile.pt"
+      add_permission="cmf.ModifyPortalContent"
+      permission="zope2.View"
+      layer=".interfaces.ICollectiveTilesDiscussionLayer"
+      for="*"
+      />
 
   <!-- -*- extra stuff goes here -*- -->
 

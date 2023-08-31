@@ -1,33 +1,33 @@
-# -*- coding: utf-8 -*-
 """Installer for the collective.tiles.discussion package."""
 
+from pathlib import Path
 from setuptools import find_packages
 from setuptools import setup
 
 
 long_description = '\n\n'.join([
-    open('README.rst').read(),
-    open('CONTRIBUTORS.rst').read(),
-    open('CHANGES.rst').read(),
+    Path('README.rst').read_text(),
+    Path('CONTRIBUTORS.rst').read_text(),
+    Path('CHANGES.rst').read_text(),
 ])
 
 
 setup(
     name='collective.tiles.discussion',
     version='1.0a1',
-    description="Tile for showing last discussion items in the portal",
+    description="Tile for showing most recent discussion items.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
-        "Framework :: Plone :: 5.2",
         "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
@@ -39,7 +39,6 @@ setup(
         'PyPI': 'https://pypi.org/project/collective.tiles.discussion/',
         'Source': 'https://github.com/collective/collective.tiles.discussion',
         'Tracker': 'https://github.com/collective/collective.tiles.discussion/issues',
-        # 'Documentation': 'https://collective.tiles.discussion.readthedocs.io/en/latest/',
     },
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
@@ -47,29 +46,20 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
-        'z3c.jbot',
-        'plone.api>=1.8.4',
-        'plone.app.dexterity',
+        'plone.app.tiles',
     ],
     extras_require={
         'test': [
+            'plone.app.mosaic',
             'plone.app.testing',
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
-            'plone.testing>=5.0.0',
-            'plone.app.contenttypes',
-            'plone.app.robotframework[debug]',
+            'plone.testing',
         ],
     },
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
-    [console_scripts]
-    update_locale = collective.tiles.discussion.locales.update:update_locale
     """,
 )

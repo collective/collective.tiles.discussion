@@ -3,9 +3,11 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="collective.tiles.discussion">
 
+  <!-- TODO: removing an element does not work.
+       See https://github.com/plone/plone.app.registry/issues/42  -->
   <record name="plone.app.tiles">
     <value purge="false">
-      <element>collective.tiles.discussion</element>
+      <element remove="true">collective.tiles.discussion</element>
     </value>
   </record>
 
@@ -14,18 +16,7 @@
        The package may not have been activated in Plone. -->
   <records prefix="plone.app.mosaic.app_tiles.collective_tiles_discussion"
            interface="plone.app.mosaic.interfaces.ITile"
-           condition="installed plone.app.mosaic">
-    <value key="name">collective.tiles.discussion</value>
-    <value key="label">Latest comments</value>
-    <value key="category">applications</value>
-    <value key="tile_type">app</value>
-    <value key="default_value"></value>
-    <value key="read_only">false</value>
-    <value key="settings">true</value>
-    <value key="favorite">false</value>
-    <value key="rich_text">false</value>
-    <value key="weight">20</value>
-  </records>
+           remove="true" />
 
 <!-- -*- extra stuff goes here -*- -->
 
