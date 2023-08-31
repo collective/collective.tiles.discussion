@@ -1,0 +1,5 @@
+graft src/collective.tiles
+include *.rst
+exclude tox.ini
+exclude *.txt
+global-exclude *.pyc
