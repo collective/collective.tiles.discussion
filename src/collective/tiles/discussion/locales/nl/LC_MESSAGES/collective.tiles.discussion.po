@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.tiles.discussion\n"
-"POT-Creation-Date: 2022-09-09 11:38+0000\n"
+"POT-Creation-Date: 2023-08-31 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Zest Software <info@zestsoftware.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,87 +14,59 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.tiles.discussion\n"
 
-#: ./browser/discussion_list_search.pt:68
-#: ./discussiontile.pt:21
+#: ../discussion_tile.pt:32
 msgid "${discussion_author_label} on ${discussion_response_label}"
 msgstr "${discussion_author_label} op ${discussion_response_label}"
 
-#: ./configure.zcml:23
-msgid "A tile that shows a list of comments"
-msgstr "Een tile dat een lijst van opmerkingen toont"
+#: ../configure.zcml:25
+msgid "A tile that shows the latest discussion items"
+msgstr ""
 
-#: ./discussiontile.py:160
-msgid "Add Discussion Tile"
-msgstr "Voeg opmerkingentile toe"
-
-#: ./browser/discussion_list_search.pt:33
-msgid "Comment search"
-msgstr "Zoek in opmerkingen"
-
-#: ./configure.zcml:23
-msgid "Discussion tile"
-msgstr "Opmerkingen-tile"
-
-#: ./configure.zcml:31
-msgid "Discussion tile: uninstall"
-msgstr "Opmerkingen-tile: deïnstalleren"
-
-#: ./discussiontile.py:117
-msgid "Discussions"
-msgstr "Opmerkingen"
-
-#: ./discussiontile.py:43
+#: ../interfaces.py:31
 msgid "Discussions folder"
 msgstr "Map met opmerkingen (recursief)"
 
-#: ./discussiontile.py:31
-msgid "Discussions state"
-msgstr "Status van de opmerkingen"
-
-msgid "Edit Discussion Tile"
-msgstr "Bewerk opmerkingentile"
-
-#: ./discussiontile.py:44
+#: ../interfaces.py:32
 msgid "Insert the folder where you want to search the discussions. Leave empty to search in all the portal."
 msgstr "Geef de map op van waaronder het tile opmerkingen moet tonen. Laat leeg om van de hele website opmerkingen te tonen."
 
-#: ./discussiontile.py:26
-msgid "Insert the tile title."
-msgstr "Titel van het tile."
+#: ../profiles.zcml:15
+msgid "Installs the collective.tiles.discussion add-on."
+msgstr ""
 
-#: ./discussiontile.py:58
+#: ../configure.zcml:25
+#: ../tile.py:15
+msgid "Latest comments"
+msgstr ""
+
+#: ../interfaces.py:46
 msgid "Number of discussions"
 msgstr "Aantal opmerkingen"
 
-#: ./utility/vocab.py:21
-msgid "Pending"
-msgstr "In behandeling"
+#: ../interfaces.py:20
+msgid "Review states"
+msgstr ""
 
-#: ./discussiontile.py:25
-msgid "Tile title"
-msgstr "Titel"
-
-#: ./utility/vocab.py:22
-msgid "Published"
-msgstr "Gepubliceerd"
-
-#: ./discussiontile.py:32
+#: ../interfaces.py:21
 msgid "Select the review state of the discussions. Leave empty to show all the discussions."
 msgstr "Kies de workflow-status van de opmerkingen. Laat leeg om alle opmerkingen te tonen."
 
-#: ./discussiontile.py:61
+#: ../interfaces.py:49
 msgid "Specify how many discussions will be shown in the tile."
 msgstr "Geef op hoeveel opmerkingen het tile mag weergeven"
 
-#: ./discussiontile.py:161
-msgid "This tile displays a list of comments."
-msgstr "Dit tile toont een lijst van opmerkingen."
+#: ../interfaces.py:15
+msgid "Title"
+msgstr ""
 
-#. Default: "Other..."
-#: ./discussiontile.pt:31
-msgid "label_other"
-msgstr "Andere..."
+#: ../profiles.zcml:24
+msgid "Uninstalls the collective.tiles.discussion add-on."
+msgstr ""
 
-#: ./browser/discussion_list_search.pt:82
-msgid "written by"
-msgstr "geschreven door"
+#: ../profiles.zcml:15
+msgid "collective.tiles.discussion"
+msgstr ""
+
+#: ../profiles.zcml:24
+msgid "collective.tiles.discussion (uninstall)"
+msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.tiles.discussion\n"
-"POT-Creation-Date: 2022-09-09 11:38+0000\n"
+"POT-Creation-Date: 2023-08-31 15:36+0000\n"
 "PO-Revision-Date: 2010-10-05 09:47+0000\n"
 "Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <sviluppoplone@redturtle.it>\n"
@@ -16,98 +16,64 @@ msgstr ""
 
 #. Default "${discussion_author_label} on ${discussion_response_label}"
 #. Default: "${discussion_author_label} on ${discussion_response_label}"
-#: ./browser/discussion_list_search.pt:68
-#: ./discussiontile.pt:21
+#: ../discussion_tile.pt:32
 msgid "${discussion_author_label} on ${discussion_response_label}"
 msgstr "${discussion_author_label} su ${discussion_response_label}"
 
-#: ./configure.zcml:23
-msgid "A tile that shows a list of comments"
-msgstr "Una tile che mostra una lista di commenti"
-
-#: ./discussiontile.py:160
-msgid "Add Discussion Tile"
+#: ../configure.zcml:25
+msgid "A tile that shows the latest discussion items"
 msgstr ""
-
-#: ./browser/discussion_list_search.pt:33
-msgid "Comment search"
-msgstr "Ricerca commenti"
-
-#: ./configure.zcml:23
-msgid "Discussion tile"
-msgstr "Tile dei commenti"
-
-#: ./configure.zcml:31
-msgid "Discussion tile: uninstall"
-msgstr ""
-
-#. Default "Discussions"
-#: ./discussiontile.py:117
-msgid "Discussions"
-msgstr "Commenti"
 
 #. Default "Discussions folder"
-#: ./discussiontile.py:43
+#: ../interfaces.py:31
 msgid "Discussions folder"
 msgstr "Cartella dei commenti"
 
-#. Default: "Discussions state"
-#: ./discussiontile.py:31
-msgid "Discussions state"
-msgstr "Stato commenti"
-
-#: ./discussiontile.py:171
-msgid "Edit Discussion Tile"
-msgstr ""
-
 #. Default "Insert the folder where you want to search the discussions. Leave empty to search in all the portal."
-#: ./discussiontile.py:44
+#: ../interfaces.py:32
 msgid "Insert the folder where you want to search the discussions. Leave empty to search in all the portal."
 msgstr "Inserisci la cartella dove cercare i commenti. Lascialo vuoto per cercare in tutto il sito."
 
-#. Default: "Insert the tile title."
-#: ./discussiontile.py:26
-msgid "Insert the tile title."
-msgstr "Inserisci il titolo della tile."
+#: ../profiles.zcml:15
+msgid "Installs the collective.tiles.discussion add-on."
+msgstr ""
+
+#: ../configure.zcml:25
+#: ../tile.py:15
+msgid "Latest comments"
+msgstr ""
 
 #. Default "Number of discussions"
-#: ./discussiontile.py:58
+#: ../interfaces.py:46
 msgid "Number of discussions"
 msgstr "Numero di commenti"
 
-#: ./utility/vocab.py:21
-msgid "Pending"
-msgstr "In attesa"
-
-#. Default: "Tile title"
-#: ./discussiontile.py:25
-msgid "Tile title"
-msgstr "Titolo tile"
-
-#. Default "Published"
-#: ./utility/vocab.py:22
-msgid "Published"
-msgstr "Pubblicato"
+#: ../interfaces.py:20
+msgid "Review states"
+msgstr ""
 
 #. Default: "Select the review state of the discussions. Leave empty to show all the discussions."
-#: ./discussiontile.py:32
+#: ../interfaces.py:21
 msgid "Select the review state of the discussions. Leave empty to show all the discussions."
 msgstr "Seleziona lo stato di pubblicazione dei commenti. Lascialo vuoto per visualizzare tutti i commenti."
 
 #. Default "Specify how many discussions will be shown in the tile."
-#: ./discussiontile.py:61
+#: ../interfaces.py:49
 msgid "Specify how many discussions will be shown in the tile."
 msgstr "Specifica quanti commenti mostrare nella tile."
 
-#: ./discussiontile.py:161
-msgid "This tile displays a list of comments."
+#: ../interfaces.py:15
+msgid "Title"
 msgstr ""
 
-#. Default: "Other..."
-#: ./discussiontile.pt:31
-msgid "label_other"
-msgstr "Altro..."
+#: ../profiles.zcml:24
+msgid "Uninstalls the collective.tiles.discussion add-on."
+msgstr ""
 
-#: ./browser/discussion_list_search.pt:82
-msgid "written by"
-msgstr "inserito da"
+#: ../profiles.zcml:15
+msgid "collective.tiles.discussion"
+msgstr ""
+
+#: ../profiles.zcml:24
+msgid "collective.tiles.discussion (uninstall)"
+msgstr ""
