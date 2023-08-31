@@ -32,9 +32,9 @@ class DiscussionTile(tiles.PersistentTile):
         if uuid:
             path = uuidToPhysicalPath(uuid)
             query["path"] = path
-        # TODO support state?
-        # if len(self.data.discussionState) == 1:
-        #     query["review_state"] = self.data.discussionState[0]
+        state = self.data.get("discussion_states")
+        if state:
+            query["review_state"] = state
         if self.limit > 0:
             # Pass on sorting hint to the catalog.
             query["sort_limit"] = self.limit

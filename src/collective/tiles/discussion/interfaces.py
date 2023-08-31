@@ -17,18 +17,16 @@ class IDiscussionTileData(model.Schema):
         required=False,
     )
 
-    # collective.portlet.discussion has the next field, but let's start without it.
-    # It needs a custom vocabulary.  See collective.portlet.discussion.utility.vocab.
-    # discussionState = schema.List(
-    #     title=_("Discussions state"),
-    #     description=_(
-    #         "Select the review state of the discussions. Leave empty to show all the discussions."
-    #     ),
-    #     value_type=schema.Choice(
-    #         vocabulary="collective.portlet.discussion.DiscussionStatesVocab",
-    #         required=False,
-    #     ),
-    # )
+    discussion_states = schema.List(
+        title=_("Review states"),
+        description=_(
+            "Select the review state of the discussions. Leave empty to show all the discussions."
+        ),
+        required=False,
+        value_type=schema.Choice(
+            vocabulary="collective.tile.discussion.DiscussionStatesVocabulary",
+        ),
+    )
 
     discussion_folder = schema.Choice(
         title=_("Discussions folder"),

@@ -24,6 +24,11 @@
       for="*"
       />
 
+  <utility
+    component=".vocabulary.DiscussionStatesVocabularyFactory"
+    name="collective.tile.discussion.DiscussionStatesVocabulary"
+    />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>
