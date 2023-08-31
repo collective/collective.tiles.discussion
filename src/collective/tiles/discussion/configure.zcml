@@ -13,7 +13,7 @@
 
   <plone:tile
       name="collective.tiles.discussion"
-      title="Discussion tile"
+      title="Latest comments"
       description="A tile that shows the latest discussion items"
       for="*"
       schema=".interfaces.IDiscussionTileData"
